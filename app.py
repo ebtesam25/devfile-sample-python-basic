@@ -9,11 +9,9 @@ app = Flask(__name__)
 def home():
     if request.method == 'GET':
         print("************************************")
-        print("Response:",request.args['Body'])
-        print("From:",request.args['From'])
-        
+        print("Response")        
         print("---------------------------------------")
-        return '', 200
+        return 'Hello World!', 200
     else:
         abort(400)
 

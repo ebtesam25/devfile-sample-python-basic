@@ -8,33 +8,8 @@ app = Flask(__name__)
 def home():
     if request.method == 'GET':
         print("************************************")
-        
-        print("---------------------------------------")
-        return '', 200
-    else:
-        abort(400)
-
-
-@app.route('/webhook', methods=['POST','GET'])
-def webhook():
-    if request.method == 'GET':
-        print("************************************")
         print("Response:",request.args['Body'])
         print("From:",request.args['From'])
-        
-        print("---------------------------------------")
-        return '', 200
-    else:
-        abort(400)
-
-
-@app.route('/mms', methods=['POST','GET'])
-def mms():
-    if request.method == 'POST':
-        print("************************************")
-        # print("Response:",request.args['Body'])
-        # print("From:",request.args['From'])
-        print("Response",request)
         
         print("---------------------------------------")
         return '', 200

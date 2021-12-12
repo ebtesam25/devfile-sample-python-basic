@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=['POST','GET'])
-def webhook():
+def home():
     if request.method == 'GET':
         print("************************************")
         

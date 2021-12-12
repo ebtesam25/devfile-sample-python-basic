@@ -4,6 +4,17 @@ from urllib.parse import parse_qs, urlparse
 app = Flask(__name__)
 
 
+@app.route('/', methods=['POST','GET'])
+def webhook():
+    if request.method == 'GET':
+        print("************************************")
+        
+        print("---------------------------------------")
+        return '', 200
+    else:
+        abort(400)
+
+
 @app.route('/webhook', methods=['POST','GET'])
 def webhook():
     if request.method == 'GET':
